@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+                  xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+                  xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" entityID="https://Ronalds-MacBook-Pro.aconex.com.au/idp/shibboleth">
+
+    <IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">com.au</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDcTCCAlmgAwIBAgIUE/hDiuBrKfACPr+3pv46EQb5GUowDQYJKoZIhvcNAQEF
+BQAwLDEqMCgGA1UEAxMhUm9uYWxkcy1NYWNCb29rLVByby5hY29uZXguY29tLmF1
+MB4XDTE0MDEwNzIzMTA1OVoXDTM0MDEwNzIzMTA1OVowLDEqMCgGA1UEAxMhUm9u
+YWxkcy1NYWNCb29rLVByby5hY29uZXguY29tLmF1MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAg0W2kzHMHceLuBcA4NBHQ6KFuY/Q2jl2iKolXgmTTF55
+UQHUdRLXvmU/EtXRglPTbZNFlB9d2pgYnGhdVjUwiGO3JB1klNkN8wGt1lSe5Lyo
+W9nxIbSKuPGnxCi9n1T1K73k0rsdlkO4/zedAZ2K02xESlBkUDw+3KNx1z3YmHX4
+4zHBWDAk/ML/y9gachyHzcbeCdal4FlUuS5H7mwWlpkewbhIeMU+WpFyk07LQBh9
+igHAEKTiCMeDvO/SjS6iew8Mk0QwHjOXJ2m3VA5NXfX3HYj/8ijeZntE9IAynUjL
+PDNIojIGav/I6GD4ftaD1ArhpQEY2RpaCNtvw/fR0wIDAQABo4GKMIGHMGYGA1Ud
+EQRfMF2CIVJvbmFsZHMtTWFjQm9vay1Qcm8uYWNvbmV4LmNvbS5hdYY4aHR0cHM6
+Ly9Sb25hbGRzLU1hY0Jvb2stUHJvLmFjb25leC5jb20uYXUvaWRwL3NoaWJib2xl
+dGgwHQYDVR0OBBYEFD0Xou+mjFcuBzcW6aV7nxuF+zgkMA0GCSqGSIb3DQEBBQUA
+A4IBAQAVN+6+ysntpZYuELah+UEQWnmc3bNbvPI0k/LRVASmnc9T6N46ox3F/o61
+A0h0ds4uzj4SlDgT6b9Xd7aViKXFvYIpfP1X9SrEEBCBxbwpDoXRurL0PRZrLy2m
+L2sSsDyJh0ptLQrdNN1eXWHErJa0b1x4XwsiTasuo7lf7X566aAtvNdcqXTqwQpz
+cICPVA/sm5agssZ6gtGGF6LVrJp9IEV8wVvtnrR3YlKXa0RPcG9Mj4ASqsil3T9N
+ZUuvZNVuHkWHaa6oVenAE6Y/kOaG74l1y1dNYjXWb8gYahvM7N+3APj+pQTu+Pes
+bW/XARPaRX+KVoB5ur+Sd3xX291J
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML2/Redirect/SLO" />
+
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML2/POST/SLO" />
+
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML2/SOAP/SLO" />
+
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/Shibboleth/SSO"/>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML2/POST/SSO"/>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML2/Redirect/SSO"/>
+    </IDPSSODescriptor>
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">com.au</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDcTCCAlmgAwIBAgIUE/hDiuBrKfACPr+3pv46EQb5GUowDQYJKoZIhvcNAQEF
+BQAwLDEqMCgGA1UEAxMhUm9uYWxkcy1NYWNCb29rLVByby5hY29uZXguY29tLmF1
+MB4XDTE0MDEwNzIzMTA1OVoXDTM0MDEwNzIzMTA1OVowLDEqMCgGA1UEAxMhUm9u
+YWxkcy1NYWNCb29rLVByby5hY29uZXguY29tLmF1MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAg0W2kzHMHceLuBcA4NBHQ6KFuY/Q2jl2iKolXgmTTF55
+UQHUdRLXvmU/EtXRglPTbZNFlB9d2pgYnGhdVjUwiGO3JB1klNkN8wGt1lSe5Lyo
+W9nxIbSKuPGnxCi9n1T1K73k0rsdlkO4/zedAZ2K02xESlBkUDw+3KNx1z3YmHX4
+4zHBWDAk/ML/y9gachyHzcbeCdal4FlUuS5H7mwWlpkewbhIeMU+WpFyk07LQBh9
+igHAEKTiCMeDvO/SjS6iew8Mk0QwHjOXJ2m3VA5NXfX3HYj/8ijeZntE9IAynUjL
+PDNIojIGav/I6GD4ftaD1ArhpQEY2RpaCNtvw/fR0wIDAQABo4GKMIGHMGYGA1Ud
+EQRfMF2CIVJvbmFsZHMtTWFjQm9vay1Qcm8uYWNvbmV4LmNvbS5hdYY4aHR0cHM6
+Ly9Sb25hbGRzLU1hY0Jvb2stUHJvLmFjb25leC5jb20uYXUvaWRwL3NoaWJib2xl
+dGgwHQYDVR0OBBYEFD0Xou+mjFcuBzcW6aV7nxuF+zgkMA0GCSqGSIb3DQEBBQUA
+A4IBAQAVN+6+ysntpZYuELah+UEQWnmc3bNbvPI0k/LRVASmnc9T6N46ox3F/o61
+A0h0ds4uzj4SlDgT6b9Xd7aViKXFvYIpfP1X9SrEEBCBxbwpDoXRurL0PRZrLy2m
+L2sSsDyJh0ptLQrdNN1eXWHErJa0b1x4XwsiTasuo7lf7X566aAtvNdcqXTqwQpz
+cICPVA/sm5agssZ6gtGGF6LVrJp9IEV8wVvtnrR3YlKXa0RPcG9Mj4ASqsil3T9N
+ZUuvZNVuHkWHaa6oVenAE6Y/kOaG74l1y1dNYjXWb8gYahvM7N+3APj+pQTu+Pes
+bW/XARPaRX+KVoB5ur+Sd3xX291J
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML1/SOAP/AttributeQuery"/>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://Ronalds-MacBook-Pro.aconex.com.au:8444/idp/profile/SAML2/SOAP/AttributeQuery"/>
+
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+    </AttributeAuthorityDescriptor>
+
+</EntityDescriptor>

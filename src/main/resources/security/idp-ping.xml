@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor ID="ZIG9gSY3BHirptRszpVODq6MmvM" cacheDuration="PT1440M" entityID="idp-aconex"
+                     xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
+                         WantAuthnRequestsSigned="true">
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>
+                        MIICITCCAYqgAwIBAgIGAUOTYVSAMA0GCSqGSIb3DQEBBQUAMFQxCzAJBgNVBAYTAkFVMREwDwYDVQQIEwhWaWN0b3JpYTESMBAGA1UEBxMJTWVsYm91cm5lMQ8wDQYDVQQKEwZhY29uZXgxDTALBgNVBAMTBHRlc3QwHhcNMTQwMTE1MDA1MTA1WhcNMTUwMTE1MDA1MTA1WjBUMQswCQYDVQQGEwJBVTERMA8GA1UECBMIVmljdG9yaWExEjAQBgNVBAcTCU1lbGJvdXJuZTEPMA0GA1UEChMGYWNvbmV4MQ0wCwYDVQQDEwR0ZXN0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCExloaAtlxeADbdVMIw/WH4FhlbRtshalE0UTfYV+q4nQpR06k/meC5oxS7Ig41uKjwmOGR1nGCww8OUVhK+eT4djwck5vv5qj9FhwQKMAFUixNaXN46enXkSoeWvyIB3868EdFAg06E7ERoNmuo5qNPQI95Ul+gi3dQ+WwuSmAwIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAD5UNHxgMNE4dDHSaRF6/aRuPVwUYgv6AmgGXeXduHerSiqWvjUWxKh1lT7XJEX+dQcnnOgU8NJQVt7GOM9M4ygjelmS6+IVj4h9s6xz3Hfu+tHh7z00CdztmjHAo/wrclG/TF/wkjFVXC13j4EuinuAbzwN5VqAh+m9n+vkhSs9
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:ArtifactResolutionService index="0"
+                                      Location="https://idp-anthonys-macbook-pro.aconex.com:9031/idp/ARS.ssaml2"
+                                      Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" isDefault="true"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                                Location="https://idp-anthonys-macbook-pro.aconex.com:9031/idp/SLO.saml2"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                                Location="https://idp-anthonys-macbook-pro.aconex.com:9031/idp/SLO.ssaml2"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                                Location="https://idp-anthonys-macbook-pro.aconex.com:9031/idp/SSO.saml2"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                                Location="https://idp-anthonys-macbook-pro.aconex.com:9031/idp/SSO.saml2"/>
+    </md:IDPSSODescriptor>
+    <md:ContactPerson contactType="administrative"/>
+</md:EntityDescriptor>
